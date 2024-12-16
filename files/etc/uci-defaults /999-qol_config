@@ -8,7 +8,7 @@
 exec > /root/uci-defaults.log 2>&1
 
 # Wireless radio0 specific settings
-uci set wireless.radio0.htmode='HE1600'
+uci set wireless.radio0.htmode='HE160'
 uci set wireless.radio0.channel='auto'
 uci set wireless.radio0.country='CN'
 
