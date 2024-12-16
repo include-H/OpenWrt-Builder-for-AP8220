@@ -83,6 +83,14 @@ jobs:
         run: |
           git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
           git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
+      - name: Clone kwrt-packages repository
+        run: |
+          git clone --depth=1 https://github.com/kiddin9/kwrt-packages.git /tmp/kwrt-packages
+
+      - name: Move custom packages to OpenWrt package directory
+        run: |
+          mv /tmp/kwrt-packages/luci-app-vlmcsd package/
+          mv /tmp/kwrt-packages/vlmcsd package/
       
       
       - name: Configure firmware image
