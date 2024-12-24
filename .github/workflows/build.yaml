@@ -2,9 +2,9 @@ name: OpenWrt Builder
 
 on:
   workflow_dispatch:
-  # push:
-  # schedule:
-  #  - cron: "0 18 * * *"
+  push:
+  schedule:
+  - cron: "* * * 7 *"
 
 env:
   REMOTE_REPOSITORY: gtolog/openwrt-ipq
